@@ -5,7 +5,7 @@ import * as authMiddleware from '../middleware/auth';
 const router = express.Router();
 
 //create product
-router.post('/create-product', productController.createProduct);
+router.post('/create-product',authMiddleware.auth, productController.createProduct);
 
 //get all products
 router.get('/get-products', authMiddleware.auth, authMiddleware.isStaff, productController.getProducts);

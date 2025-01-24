@@ -44,7 +44,7 @@ const Card = ({
         <Feather name="info" size={15} color="black" />
         <Text className="text-sm font-medium">{subscriberNotes}</Text>
       </View>
-      {status === "completed" ? (
+      {status === "Completed" ? (
         <Text className="bg-green-500 text-white text-center p-2 rounded-lg mt-2">
           Completed
         </Text>

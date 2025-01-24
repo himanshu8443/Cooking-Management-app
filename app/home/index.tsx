@@ -139,6 +139,7 @@ const index = () => {
                 subscriberNotes={item.subscriberNotes}
                 status={item.status}
                 markAsCompleted={markAsCompleted}
+                key={item._id}
               />
             ))}
           {loading && <ActivityIndicator size="large" color="#3b82f6" />}

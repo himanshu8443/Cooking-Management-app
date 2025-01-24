@@ -7,7 +7,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const index = () => {
   const [modalVisible, setModalVisible] = useState(false);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState<any>({});
 
   useEffect(() => {
     const getUser = async () => {
@@ -38,7 +38,17 @@ const index = () => {
           </Text>
         </TouchableOpacity>
       )}
-      {user?.email ? (
+      {user?.email && (
+        <TouchableOpacity
+          onPress={() => setModalVisible(true)}
+          className="bg-blue-500 p-3 rounded-lg"
+        >
+          <Text className="text-white text-center font-extrabold">
+            Create Order
+          </Text>
+        </TouchableOpacity>
+      )}
+      {user?.email && (
         <TouchableOpacity
           onPress={async () => {
             await AsyncStorage.removeItem("user");
@@ -49,16 +59,8 @@ const index = () => {
         >
           <Text className="text-white text-center font-extrabold">Logout</Text>
         </TouchableOpacity>
-      ) : (
-        <TouchableOpacity
-          onPress={() => setModalVisible(true)}
-          className="bg-blue-500 p-3 rounded-lg"
-        >
-          <Text className="text-white text-center font-extrabold">
-            Create Order
-          </Text>
-        </TouchableOpacity>
       )}
+
       <OrderModal visible={modalVisible} setVisible={setModalVisible} />
     </View>
   );

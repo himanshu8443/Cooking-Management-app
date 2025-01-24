@@ -2,12 +2,14 @@
 
 # Cook Application
 
+## Screenshots
 https://github.com/user-attachments/assets/0b6291c2-f286-4a4c-b440-f3b5640beb4f
 
 <img src="https://github.com/user-attachments/assets/4b5adf0f-6bf2-4649-bd28-250e9a4bf100" width="400">
 
+
 ### Tech Stack
-React Native, Expo
+React Native, Expo, Typescript
 
 ## Get started
 

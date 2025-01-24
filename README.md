@@ -1,5 +1,6 @@
 
 
+
 # Cook Application
 
 ## Screenshots & Video
@@ -19,7 +20,8 @@ React Native, Expo, Typescript
    npm install
    ```
 
-2. Start the app
+2. Update BASE_URL in `/constants/constant.ts` with backend URL
+3. Start the app
 
    ```bash
     npx expo start
@@ -38,14 +40,18 @@ ExpressJS, Typescript , MongoDb.
 ##### Server in provided in /server folder
 ### Get started
 
-1. Install dependencies
-2. Add .env ([.env.template](https://github.com/himanshu8443/Cooking-Management-app/blob/main/server/.env.template ".env.template"))
+1.  Go to server folder
+       ```
+       cd server
+       ```
+3. Add .env ([.env.template](https://github.com/himanshu8443/Cooking-Management-app/blob/main/server/.env.template ".env.template"))
+4. Install dependencies
 
    ```bash
    npm install
    ```
 
-3. Start the app
+5. Start the app
 
    ```bash
     npm run dev
